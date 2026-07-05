@@ -202,6 +202,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const startBtn = document.getElementById("start-btn");
   startBtn.onclick = () => {
+      const bgm = document.getElementById("bgm");
+  if (bgm) {
+    bgm.volume = 0.6;
+    bgm.play();
+  }
     const box = document.getElementById("home-message-box");
     const title = document.getElementById("home-title");
     const bg = document.querySelector(".bg-overlay");
