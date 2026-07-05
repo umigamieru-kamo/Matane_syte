@@ -303,11 +303,16 @@ body {
 }
 
 /* エンド画面 */
+#end-screen {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
+}
 
-.end-content {
-  padding: 3rem 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
+#end-screen {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 
 .letter-area {
@@ -402,9 +407,10 @@ body {
 }
 
 .letter-image-wrapper {
-  position: relative;
   height: 700px;
   overflow: hidden;
+  display: flex;
+  align-items: flex-start;
 }
 
 .end-image {
