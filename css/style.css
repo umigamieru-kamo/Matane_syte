@@ -46,13 +46,13 @@ body {
 /* ホーム画面 */
 
 .bg-overlay {
-  position: fixed;   /* ← これが最重要 */
+  position: fixed; 
   inset: 0;
   background-size: cover;
   background-position: center;
   filter: sepia(0.9) contrast(1.1) brightness(0.9);
   opacity: 0.4;
-  pointer-events: none; /* ← クリックを邪魔しない */
+  pointer-events: none;
 }
 
 .home-content {
@@ -245,19 +245,19 @@ body {
   margin: 1.2rem 0;
   padding: 1.5rem 2rem;
 
-  /* 古びた紙の質感 - もっと濃い背景 */
+  /* 質感 */
   background: rgba(245, 233, 214, 0.55);
   border: 3px solid rgba(91, 58, 31, 0.85);
   border-radius: 12px;
 
-  /* 紙のざらつき（ドット風） */
+  /* 紙のざらつき */
   background-image:
     radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px),
     radial-gradient(rgba(0,0,0,0.15) 1px, transparent 1px);
   background-size: 4px 4px, 6px 6px;
   background-blend-mode: overlay;
 
-  /* テキスト - 太字、強い影、大きいサイズ */
+  /* テキスト */
   color: #5b3a1f;
   font-size: 1.1rem;
   text-shadow: 
@@ -321,15 +321,12 @@ body {
   overflow: hidden;
   cursor: pointer;
   
-  /* 古びた枠線 - より強調 */
+  /* 手紙 */
   border: 3px solid rgba(139, 90, 43, 0.8);
   
-  /* 羊皮紙のリッチなテクスチャー */
   background-image:
-    /* ランダム性のある細かいノイズ1 */
     radial-gradient(circle at 20% 30%, rgba(139, 90, 43, 0.15) 1px, transparent 1px),
-    radial-gradient(circle at 60% 70%, rgba(139, 90, 43, 0.1) 0.5px, transparent 0.5px),
-    /* ランダム性のある細かいノイズ2 */
+    radial-gradient(circle at 60% 70%, rgba(139, 90, 43, 0.1) 0.5px, transparent 0.5px)
     radial-gradient(circle at 40% 60%, rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px),
     radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
     /* ざらつき効果 */
@@ -433,14 +430,13 @@ body {
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
   
-  /* 紙のような枠 - 薄い、淡い影 */
   border: 1px solid rgba(139, 90, 43, 0.5);
   border-radius: 0.3rem;
   background-color: rgba(245, 233, 214, 0.4);
   padding: 1.2rem;
   backdrop-filter: blur(2px);
   
-  /* 淡い影のみ */
+  /* 淡い影 */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -484,7 +480,6 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* 真の終幕 */
 
 .final-content {
   height: 100vh;
@@ -687,7 +682,6 @@ body {
   background-repeat: no-repeat !important;
 }
 
-/* 占い師コメント - セピア色、ボタンではなく紙のような見た目 */
 .question-message {
   color: #5b3a1f;
   font-size: 1rem;
@@ -696,7 +690,7 @@ body {
   margin-top: 1.5rem;
   letter-spacing: 0.05em;
   
-  /* 紙のような枠 - 薄い、淡い影 */
+  /* 紙のような枠,影 */
   border: 1px solid rgba(91, 58, 31, 0.5);
   border-radius: 0.3rem;
   background-color: rgba(245, 233, 214, 0.4);
@@ -705,4 +699,15 @@ body {
   
   /* 淡い影のみ */
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#end-screen {
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* スマホでヌルヌル */
+}
+
+#end-screen .end-content {
+  min-height: 120vh;
+  padding-bottom: 6rem;
 }
