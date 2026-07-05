@@ -719,7 +719,7 @@ body {
 .letter-area {
   max-height: 75vh;
   overflow: hidden;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .letter-image-wrapper {
