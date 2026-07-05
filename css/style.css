@@ -713,8 +713,10 @@ body {
 }
 
 .letter-area {
-  max-height: 85vh;
-  overflow-y: auto;
+  max-height: 75vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .letter-image-wrapper {
