@@ -51,13 +51,6 @@ function typeWriter(element, text, speed = 90, callback = null) {
   type();
 }
 
-document.addEventListener("click", () => {
-  const bgm = document.getElementById("bgm");
-  if (bgm) {
-    bgm.volume = 0.5;
-    bgm.play();
-  }
-}, { once: true });
 
 
 // 
@@ -208,32 +201,46 @@ document.addEventListener("DOMContentLoaded", () => {
     bgm.play().catch(() => {});
   }
 
-  const startBtn = document.getElementById("start-btn");
-  startBtn.onclick = () => {
-      const bgm = document.getElementById("bgm");
+const startBtn = document.getElementById("start-btn");
+
+startBtn.onclick = async () => {
+
+  const bgm = document.getElementById("bgm");
+
   if (bgm) {
-    bgm.volume = 0.6;
-    bgm.play();
+    try {
+      bgm.volume = 0.6;
+
+      // ★重要：ロード保証
+      bgm.load();
+
+      await bgm.play();
+
+      console.log("BGM再生成功");
+    } catch (err) {
+      console.log("BGM再生失敗:", err);
+    }
   }
-    const box = document.getElementById("home-message-box");
-    const title = document.getElementById("home-title");
-    const bg = document.querySelector(".bg-overlay");
 
-    if (bg) bg.style.backgroundImage = 'url("assets/img/bg_question.jpg")';
-    if (title) title.classList.add("hidden");
-    if (box) box.classList.add("hidden");
-    startBtn.classList.add("hidden");
+  const box = document.getElementById("home-message-box");
+  const title = document.getElementById("home-title");
+  const bg = document.querySelector(".bg-overlay");
 
-    box.classList.add("fade-out", "fade-active");
+  if (bg) bg.style.backgroundImage = 'url("assets/img/bg_question.jpg")';
+  if (title) title.classList.add("hidden");
+  if (box) box.classList.add("hidden");
+  startBtn.classList.add("hidden");
 
-    setTimeout(() => {
-      currentQuestion = 1;
-      answers = { 1: null, 2: null, 3: null };
-      currentRoute = null;
-      currentEndingId = null;
-      showQuestion();
-    }, 800);
-  };
+  box.classList.add("fade-out", "fade-active");
+
+  setTimeout(() => {
+    currentQuestion = 1;
+    answers = { 1: null, 2: null, 3: null };
+    currentRoute = null;
+    currentEndingId = null;
+    showQuestion();
+  }, 800);
+};
 
 setupOfficialXButton();
 });
