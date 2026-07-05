@@ -1,0 +1,43 @@
+/* 手紙縮小アニメーション */
+
+.letter-shrink {
+  animation: letterShrink 1.2s forwards;
+}
+
+@keyframes letterShrink {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.6);
+    opacity: 0.4;
+  }
+}
+
+/* ノイズっぽい揺れ（背景用） */
+
+@keyframes subtleNoise {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-1px, 1px);
+  }
+  50% {
+    transform: translate(1px, -1px);
+  }
+  75% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.bg-overlay {
+  animation: subtleNoise 6s infinite linear;
+}
+
+/* 粒子っぽいクリック演出は JS 側でクラス付与してもいいが、
+   ここでは最低限にしておく */

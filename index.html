@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>またねの約束。</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animation.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio id="bgm" src="assets/audio/hurishikirushiro.mp3" loop></audio>
+
+    <div class="bg-overlay"></div>
+
+  <div id="app">
+   
+
+<!-- ホーム画面 -->
+<section id="home-screen" class="screen active">
+ 
+
+  <div class="home-content">
+
+    <h1 id="home-title" class="title">またねの約束。</h1>
+
+    <div id="home-message-box" class="home-message-box"></div>
+
+    <button id="official-x-btn" class="btn main-btn hidden">公式X</button>
+    <button id="start-btn" class="btn main-btn hidden">視てもらう</button>
+    <button id="credit-btn" class="btn credit-btn">credit</button>
+
+  </div>
+</section>
+
+<!-- クレジットモーダル -->
+<div id="credit-modal" class="credit-modal hidden">
+  <div class="credit-inner">
+    <p>制作：またねの約束。</p>
+    <p>音楽：蒲鉾さちこ様</p>
+    <p>背景：ゲームまてりあるず様</p>
+    <p>Special Thanks：あなたの物語</p>
+    <button id="credit-close" class="btn small-btn">とじる</button>
+  </div>
+</div>
+
+<!-- 質問画面 -->
+<section id="question-screen" class="screen">
+
+  <div class="question-content">
+    <p id="question-text" class="question-text"></p>
+    <div id="question-choices" class="choices"></div>
+    <p id="question-message" class="question-message hidden"></p>
+    <button id="next-question-btn" class="btn main-btn hidden">つぎへ</button>
+  </div>
+</section>
+
+<!-- ルート画面 -->
+<section id="route-screen" class="screen">
+  
+  <!-- ルート内容 -->
+  <div class="route-content">
+    <div class="route-shadow"></div>
+    <p id="route-text" class="route-text"></p>
+    <div id="route-choices" class="route-choices"></div>
+    <div class="particle-layer"></div> 
+
+  </div>
+
+</section>
+
+<!-- エンド画面 -->
+<section id="end-screen" class="screen">
+  <div class="end-content">
+    <div id="letter-area" class="letter-area">
+      <div class="letter-header">
+        <p id="end-title" class="end-title"></p>
+      </div>
+      <div class="letter-image-wrapper">
+        <img id="end-image" class="end-image" src="" alt="end image" />
+      </div>
+    </div>
+
+    <div id="fortune-area" class="fortune-area hidden">
+      <p id="fortune-text" class="fortune-text"></p>
+      <button id="share-btn" class="btn share-btn">Xにシェアする</button>
+      <button id="retry-btn" class="btn retry-btn">さようなら。次はどこで会えるかしら</button>
+    </div>
+  </div>
+</section>
+
+<script src="js/endings.js"></script>
+<script src="js/ui.js"></script>     <!-- ★ ui.js を先に読む -->
+<script src="js/main.js"></script>   <!-- ★ その後 main.js を読む -->
+<script src="js/credit.js"></script>
+</body>
+</html>
