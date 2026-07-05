@@ -313,6 +313,7 @@ body {
 
 .letter-area {
   position: relative;
+  min-height: 80vh;
   margin: 0 auto;
   max-width: 600px;
   background-color: rgba(245, 233, 214, 0.95);
