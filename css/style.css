@@ -25,19 +25,13 @@ body {
   min-height: 100vh;
 }
 
-.letter-area {
-  max-height: 75vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
 /* 画面共通 */
 
 .screen {
   display: none;
   width: 100%;
   min-height: 100vh;
-  height: auto; 
+   height: auto;
   position: relative;
   opacity: 0;
   transform: translateY(20px);
@@ -310,16 +304,11 @@ body {
 }
 
 /* エンド画面 */
-#end-screen {
-  height: auto;
-  min-height: 100vh;
-  overflow-y: auto;
-}
 
-#end-screen {
-  height: auto;
-  min-height: 100vh;
-  overflow-y: auto;
+.end-content {
+  padding: 3rem 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .letter-area {
@@ -330,8 +319,7 @@ body {
   color: #3b2a1c;
   border-radius: 1.2rem;
   padding: 1.8rem;
-  overflow-y: auto;
-  max-height: 80vh; 
+  overflow: hidden;
   cursor: pointer;
   
   /* 古びた枠線 - より強調 */
@@ -382,7 +370,7 @@ body {
 }
 
 .letter-header {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .end-title {
@@ -415,10 +403,9 @@ body {
 }
 
 .letter-image-wrapper {
+  position: relative;
   height: 700px;
   overflow: hidden;
-  display: flex;
-  align-items: flex-start;
 }
 
 .end-image {
