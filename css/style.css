@@ -711,3 +711,13 @@ body {
   min-height: 120vh;
   padding-bottom: 6rem;
 }
+
+.letter-area {
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.letter-image-wrapper {
+  height: auto;
+  overflow: visible;
+}
