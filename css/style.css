@@ -433,6 +433,9 @@ body {
 /* 占い師コメント - ボタンではなく紙のような見た目 */
 
 .fortune-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-top: -30rem;
   text-align: center;
   opacity: 0;
