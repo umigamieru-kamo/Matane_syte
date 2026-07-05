@@ -712,11 +712,14 @@ body {
   padding-bottom: 6rem;
 }
 
+.end-content {
+  padding: 1.5rem;
+}
+
 .letter-area {
   max-height: 75vh;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .letter-image-wrapper {
