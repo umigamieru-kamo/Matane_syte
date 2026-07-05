@@ -51,6 +51,14 @@ function typeWriter(element, text, speed = 90, callback = null) {
   type();
 }
 
+document.addEventListener("click", () => {
+  const bgm = document.getElementById("bgm");
+  if (bgm) {
+    bgm.volume = 0.5;
+    bgm.play();
+  }
+}, { once: true });
+
 
 // 
 
