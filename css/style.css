@@ -312,8 +312,12 @@ body {
 }
 
 .letter-area {
+  min-height: 90vh;
+  overflow: visible;
+}
+
+.letter-area {
   position: relative;
-  min-height: 80vh;
   margin: 0 auto;
   max-width: 600px;
   background-color: rgba(245, 233, 214, 0.95);
