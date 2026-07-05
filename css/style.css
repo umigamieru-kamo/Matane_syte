@@ -47,13 +47,13 @@ body {
 /* ホーム画面 */
 
 .bg-overlay {
-  position: fixed;   /* ← これが最重要 */
+  position: fixed; 
   inset: 0;
   background-size: cover;
   background-position: center;
   filter: sepia(0.9) contrast(1.1) brightness(0.9);
   opacity: 0.4;
-  pointer-events: none; /* ← クリックを邪魔しない */
+  pointer-events: none;
 }
 
 .home-content {
@@ -133,6 +133,11 @@ body {
 
 #official-x-btn:hover {
   background-color: #a89968;
+}
+
+.fortune-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 /* クレジットボタン */
