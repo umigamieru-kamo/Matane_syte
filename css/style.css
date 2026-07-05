@@ -25,6 +25,12 @@ body {
   overflow: hidden;
 }
 
+.letter-area {
+  max-height: 75vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* 画面共通 */
 
 .screen {
